@@ -10,6 +10,9 @@ function start(size){
 function create_grid(size){
     grid_size = grid_container.offsetHeight;
     square_size = grid_size/size;
+    grid_container.style.gridTemplateColumns = `repeat(${size}, ${square_size}px [col-start]`;
+    grid_container.style.gridTemplateRows = `repeat(${size}, ${square_size}px [row-start]`;
+
 
     //Makes size^2 squares and gives them background-color, width and height properties.
     //Additionally, adds an event listener to each, that checks if the user hovers over it. 
